@@ -5,7 +5,7 @@
 ** Login   <boumah_a@epitech.net>
 ** 
 ** Started on  Mon Jul 22 13:36:43 2013 adil boumahdi
-** Last update Tue Jul 23 16:27:49 2013 adil boumahdi
+** Last update Tue Jul 23 17:18:46 2013 adil boumahdi
 */
 
 #include	"spacewar.h"
@@ -20,6 +20,7 @@ void		*tir(t_player **list, int num_player)
       if (tmp->player_id == num_player)
 	{
 	  tir2(tmp);
+	  return (NULL);
 	}
       tmp = tmp->next;
     }
@@ -35,7 +36,6 @@ void			tir2(t_player *player)
   missile->rotation = player->rotation;
 
   addmissile((&player->missile), missile);
-
   test(&player->missile);
 }
 
@@ -73,6 +73,7 @@ void            addnode(t_player **start, t_player *node)
   new->essence = node->essence;
   new->rotation = node->rotation;
   new->player_id = node->player_id;
+  new->missile = NULL;
   new->next = *start;
   *start = new;
 }
@@ -91,28 +92,29 @@ int		main(int ac, char **av)
 
   premier.X = 13.00;
   premier.Y = 15.00;
-  player->essence = 80;
+  premier.essence = 80;
   premier.rotation = 40;
   premier.player_id = 2;
 
   deux.X = 20.00;
   deux.Y = 30.00;
-  player->essence = 90;
+  deux.essence = 90;
   deux.rotation = 90;
-  deux.player_id = 2;
+  deux.player_id = 3;
 
   trois.X = 99.00;
   trois.Y = 98.00;
-  player->essence = 100;
+  trois.essence = 100;
   trois.rotation = 99;
   trois.player_id = 3;
 
   player = NULL;
+  /* player->missile =  NULL; */
 
   addnode(&player, &premier);
   addnode(&player, &deux);
   addnode(&player, &trois);
 
   tir(&player, num_player);
-  tir(&player, 3);
+  tir(&player, num_player);
 }

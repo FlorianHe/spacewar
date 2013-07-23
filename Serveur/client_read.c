@@ -5,7 +5,7 @@
 ** Login   <marcha_q@epitech.net>
 **
 ** Started on  Mon Jul 22 15:15:14 2013 Augustin Marchand
-** Last update Tue Jul 23 13:08:29 2013 Florian Helaine
+** Last update Tue Jul 23 16:40:32 2013 adil boumahdi
 */
 
 #include		<string.h>
