@@ -5,12 +5,12 @@
 ** Login   <boumah_a@epitech.net>
 ** 
 ** Started on  Mon Jul 22 13:36:43 2013 adil boumahdi
-** Last update Tue Jul 23 16:23:36 2013 adil boumahdi
+** Last update Tue Jul 23 16:27:49 2013 adil boumahdi
 */
 
 #include	"spacewar.h"
 
-t_missile		*tir(t_player **list, int num_player)
+void		*tir(t_player **list, int num_player)
 {
   t_player	*tmp;
 
