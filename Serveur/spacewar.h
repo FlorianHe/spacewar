@@ -5,7 +5,7 @@
 ** Login   <boumah_a@epitech.net>
 ** 
 ** Started on  Thu Jul 18 18:36:04 2013 adil boumahdi
-** Last update Tue Jul 23 13:21:33 2013 adil boumahdi
+** Last update Tue Jul 23 14:52:30 2013 adil boumahdi
 */
 
 #include	<math.h>
@@ -26,11 +26,12 @@
 
 typedef struct		s_player
 {
-  float			X;
-  float			Y;
+  int			X;
+  int			Y;
   int			essence;
   float			rotation;
   int			player_id;
+  int			player_fd;
   struct s_missile	*missile;
   struct s_player	*next;
 }			t_player;

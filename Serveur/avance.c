@@ -5,10 +5,22 @@
 ** Login   <boumah_a@epitech.net>
 ** 
 ** Started on  Fri Jul 19 15:18:30 2013 adil boumahdi
-** Last update Mon Jul 22 16:54:22 2013 adil boumahdi
+** Last update Tue Jul 23 15:35:35 2013 adil boumahdi
 */
 
 #include	"spacewar.h"
+
+void		check_value(t_player *player)
+{
+  if (player->X > 0)
+    player->X = player->X % 800;
+  else if (player->X < 0)
+    player->X = 800 + player->X;
+  if (player->Y > 0)
+    player->Y = player->Y % 800;
+  else if (player->Y < 0)
+    player->Y = 800 + player->Y;
+}
 
 void		avance(t_player **list, int num_player)
 {
@@ -19,13 +31,14 @@ void		avance(t_player **list, int num_player)
     {
       if (tmp->player_id == num_player)
       	{
-      	  tmp->X = (tmp->X + cos(3.14 * tmp->rotation / 180.0));
+	  check_value(tmp);
+	  tmp->X = (tmp->X + cos(3.14 * tmp->rotation / 180.0));
       	  tmp->Y = (tmp->Y + sin(3.14 * tmp->rotation / 180.0));
-      	  printf("%f\n", tmp->X);
-      	  printf("%f\n", tmp->Y);
-      	  printf("%d\n", tmp->essence);
-      	  printf("%f\n", tmp->rotation);
-      	  printf("%d\n", tmp->player_id);
+	  check_value(tmp);
+	  /* printf("%f\n", tmp->X); */
+      	  /* printf("%f\n", tmp->Y); */
+      	  /* printf("%f\n", tmp->rotation); */
+      	  /* printf("%d\n", tmp->player_id); */
 	  /* tmp->essence = tmp->essence - coeff  gravité */
 	}
       tmp = tmp->next;
@@ -60,9 +73,9 @@ int             main(int ac, char **av)
 
   player =  malloc(sizeof(t_player));
 
-  premier.X = 13.00;
-  premier.Y = 15.00;
-  player->essence = 80;
+  premier.X = 1004;
+  premier.Y = -15.00;
+  player->essence = 30;
   premier.rotation = 40;
   premier.player_id = 2;
 
