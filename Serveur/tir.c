@@ -5,7 +5,7 @@
 ** Login   <boumah_a@epitech.net>
 ** 
 ** Started on  Mon Jul 22 13:36:43 2013 adil boumahdi
-** Last update Tue Jul 23 13:40:52 2013 adil boumahdi
+** Last update Tue Jul 23 16:23:36 2013 adil boumahdi
 */
 
 #include	"spacewar.h"
@@ -33,23 +33,20 @@ void			tir2(t_player *player)
   missile->x = player->X;
   missile->y = player->Y;
   missile->rotation = player->rotation;
-  /* printf("%f\n", missile->x); */
-  /* printf("%f\n", missile->y); */
-  /* printf("%f\n", missile->rotation); */
 
-  addmissile(&missile, missile);
-  test(&missile);
+  addmissile((&player->missile), missile);
+
+  test(&player->missile);
 }
 
-void			test(t_missile **list)
+void			test(t_missile	**list)
 {
   t_missile *tmp;
-  printf("ok\n");
 
   tmp = *list;
-  while (tmp->next != NULL)
+  while (tmp != NULL)
     {
-      printf("%f\n", tmp->x);
+      printf("%d\n", tmp->x);
       tmp = tmp->next;
     }
 }
@@ -96,7 +93,7 @@ int		main(int ac, char **av)
   premier.Y = 15.00;
   player->essence = 80;
   premier.rotation = 40;
-  premier.player_id = 1;
+  premier.player_id = 2;
 
   deux.X = 20.00;
   deux.Y = 30.00;

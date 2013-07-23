@@ -5,7 +5,7 @@
 ** Login   <boumah_a@epitech.net>
 ** 
 ** Started on  Thu Jul 18 18:36:04 2013 adil boumahdi
-** Last update Tue Jul 23 14:52:30 2013 adil boumahdi
+** Last update Tue Jul 23 16:23:19 2013 adil boumahdi
 */
 
 #include	<math.h>
@@ -38,8 +38,8 @@ typedef struct		s_player
 
 typedef struct		s_missile
 {
-  float			x;
-  float			y;
+  int			x;
+  int			y;
   float			rotation;
   struct s_missile	*next;
 }			t_missile;
