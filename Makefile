@@ -5,7 +5,7 @@
 ## Login   <helain_f@epitech.net>
 ## 
 ## Started on  Mon Apr  8 12:24:41 2013 florian helaine
-## Last update Tue Jul 23 13:14:41 2013 Florian Helaine
+## Last update Wed Jul 24 18:57:44 2013 Florian Helaine
 ##
 
 CLIENT=		client
@@ -26,6 +26,13 @@ SRC_SERVER=	Serveur/add_client.c \
 		Serveur/xbind.c \
 		Serveur/xlisten.c \
 		Serveur/xsocket.c \
+		Serveur/avance.c \
+		Serveur/gauche.c \
+		Serveur/droite.c \
+		Serveur/graph_avance.c \
+		Serveur/graph_gauche.c \
+		Serveur/graph_droite.c \
+		Serveur/xmalloc.c \
 
 OBJ_CLIENT=	$(SRC_CLIENT:.cpp=.o)
 
@@ -37,7 +44,7 @@ client:		$(OBJ_CLIENT)
 		gcc -o $(CLIENT) $(OBJ_CLIENT)
 
 serveur:	$(OBJ_SERVER)
-		gcc -o $(SERVER) $(OBJ_SERVER)
+		gcc -o $(SERVER) $(OBJ_SERVER) -lm
 
 clean:		
 		rm -f $(OBJ_SERVER)

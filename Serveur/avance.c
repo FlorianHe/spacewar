@@ -5,10 +5,10 @@
 ** Login   <boumah_a@epitech.net>
 ** 
 ** Started on  Fri Jul 19 15:18:30 2013 adil boumahdi
-** Last update Tue Jul 23 15:35:35 2013 adil boumahdi
+** Last update Wed Jul 24 22:08:18 2013 Florian Helaine
 */
 
-#include	"spacewar.h"
+#include	"serveur.h"
 
 void		check_value(t_player *player)
 {
@@ -29,7 +29,7 @@ void		avance(t_player **list, int num_player)
   tmp = *list;
   while (tmp != NULL)
     {
-      if (tmp->player_id == num_player)
+      if (tmp->player_fd == num_player)
       	{
 	  check_value(tmp);
 	  tmp->X = (tmp->X + cos(3.14 * tmp->rotation / 180.0));
@@ -40,6 +40,8 @@ void		avance(t_player **list, int num_player)
       	  /* printf("%f\n", tmp->rotation); */
       	  /* printf("%d\n", tmp->player_id); */
 	  /* tmp->essence = tmp->essence - coeff  gravité */
+	  printf("x == %d y == %d\n", tmp->X, tmp->Y);
+	  graph_avance(tmp->player_fd, tmp);
 	}
       tmp = tmp->next;
     }
@@ -49,19 +51,18 @@ void		addnode(t_player **start, t_player *node)
 {
   t_player	*new;
 
-  new = malloc(sizeof(t_player));
-
+  new = xmalloc(sizeof(t_player));
   new->X = node->X;
   new->Y = node->Y;
   new->essence = node->essence;
   new->rotation = node->rotation;
   new->player_id = node->player_id;
-
+  new->player_fd = node->player_fd;
   new->next = *start;
   *start = new;
 }
 
-int             main(int ac, char **av)
+/*int             main(int ac, char **av)
 {
   t_player      *player;
   t_player	premier;
@@ -75,21 +76,24 @@ int             main(int ac, char **av)
 
   premier.X = 1004;
   premier.Y = -15.00;
-  player->essence = 30;
+  //player->essence = 30;
   premier.rotation = 40;
   premier.player_id = 2;
+  premier.player_fd = 2;
 
   deux.X = 20.00;
   deux.Y = 30.00;
-  player->essence = 90;
+  //player->essence = 90;
   deux.rotation = 90;
   deux.player_id = 3;
+  deux.player_fd = 3;
 
   trois.X = 99.00;
   trois.Y = 98.00;
-  player->essence = 100;
+  //player->essence = 100;
   trois.rotation = 99;
   trois.player_id = 4;
+  trois.player_fd = 4;
 
   player = NULL;
 
@@ -99,3 +103,4 @@ int             main(int ac, char **av)
 
   avance(&player, num_player);
 }
+*/

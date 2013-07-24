@@ -5,14 +5,14 @@
 ** Login   <marcha_q@epitech.net>
 **
 ** Started on  Mon Jul 22 14:03:18 2013 Augustin Marchand
-** Last update Tue Jul 23 13:35:02 2013 adil boumahdi
+** Last update Wed Jul 24 21:00:39 2013 Florian Helaine
 */
 
 #include			<string.h>
 #include			<stdlib.h>
 #include			"serveur.h"
 
-int				main(int ac, char *av[])
+int				main(int ac, char **av)
 {
   t_serv			serv;
   int				i;
@@ -20,6 +20,9 @@ int				main(int ac, char *av[])
   i = 1;
   serv.game = 5;
   serv.player = 2;
+  serv.next = NULL;
+  serv.id_player = 1;
+  srand (time(NULL));
   while(i != ac)
     {
       if (strcmp(av[i], "-p") == 0 && serv.player == 2 && i + 1 < ac)
