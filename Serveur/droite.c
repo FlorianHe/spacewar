@@ -5,7 +5,7 @@
 ** Login   <boumah_a@epitech.net>
 ** 
 ** Started on  Fri Jul 19 15:20:31 2013 adil boumahdi
-** Last update Wed Jul 24 21:29:28 2013 Florian Helaine
+** Last update Thu Jul 25 13:54:21 2013 adil boumahdi
 */
 
 #include	"spacewar.h"
@@ -19,7 +19,7 @@ void            droite(t_player **list, int num_player)
     {
       if (tmp->player_fd == num_player)
 	{
-	  tmp->rotation = tmp->rotation + 15;
+	  tmp->rotation = tmp->rotation + 45;
 	  if (tmp->rotation >= 360)
 	    tmp->rotation = 0;
 	  graph_droite(tmp->player_fd, tmp);

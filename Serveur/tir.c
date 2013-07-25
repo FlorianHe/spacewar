@@ -5,7 +5,7 @@
 ** Login   <boumah_a@epitech.net>
 ** 
 ** Started on  Mon Jul 22 13:36:43 2013 adil boumahdi
-** Last update Tue Jul 23 17:18:46 2013 adil boumahdi
+** Last update Thu Jul 25 13:51:02 2013 adil boumahdi
 */
 
 #include	"spacewar.h"
@@ -34,7 +34,6 @@ void			tir2(t_player *player)
   missile->x = player->X;
   missile->y = player->Y;
   missile->rotation = player->rotation;
-
   addmissile((&player->missile), missile);
   test(&player->missile);
 }
