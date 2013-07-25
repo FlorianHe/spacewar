@@ -1,11 +1,11 @@
 ##
-## Makefile for my_ftp in /home/helain_f/Semestre_3/Systeme_Unix/my_Ftp/dev-my_ftp
+## Makefile for my_ftp in /home/helain_f/Semestre_3/Systeme_Unix/
 ## 
 ## Made by florian helaine
 ## Login   <helain_f@epitech.net>
 ## 
-## Started on  Mon Apr  8 12:24:41 2013 florian helaine
-## Last update Thu Jul 25 15:41:37 2013 Florian Helaine
+## Started on  Mon Jul 22 12:24:41 2013 florian helaine
+## Last update Thu Jul 25 16:04:53 2013 Florian Helaine
 ##
 
 CLIENT=		client
@@ -30,6 +30,7 @@ SRC_SERVER=	Serveur/add_client.c \
 		Serveur/gauche.c \
 		Serveur/droite.c \
 		Serveur/tir.c \
+		Serveur/deletenode.c \
 		Serveur/move_dir.c \
 		Serveur/move_dir2.c \
 		Serveur/graph_avance.c \

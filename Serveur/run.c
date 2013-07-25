@@ -5,7 +5,7 @@
 ** Login   <marcha_q@epitech.net>
 **
 ** Started on  Mon Jul 22 15:04:56 2013 Augustin Marchand
-** Last update Mon Jul 22 15:10:26 2013 Augustin Marchand
+** Last update Thu Jul 25 16:11:48 2013 Florian Helaine
 */
 
 #include                <sys/time.h>
