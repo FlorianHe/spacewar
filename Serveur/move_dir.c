@@ -5,16 +5,14 @@
 ** Login   <boumah_a@epitech.net>
 ** 
 ** Started on  Thu Jul 25 14:53:15 2013 adil boumahdi
-** Last update Thu Jul 25 15:04:01 2013 adil boumahdi
+** Last update Thu Jul 25 15:27:45 2013 adil boumahdi
 */
 
 #include	"spacewar.h"
 
 void            Zero(t_player *player)
 {
-  printf("%d\n", player->X);
   player->X = player->X - 1;
-  printf("%d\n", player->X);
 }
 
 void            Forty_five(t_player     *player)

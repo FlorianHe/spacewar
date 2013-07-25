@@ -5,7 +5,7 @@
 ** Login   <boumah_a@epitech.net>
 ** 
 ** Started on  Fri Jul 19 15:18:30 2013 adil boumahdi
-** Last update Thu Jul 25 15:04:42 2013 adil boumahdi
+** Last update Thu Jul 25 15:27:10 2013 adil boumahdi
 */
 
 #include	"serveur.h"
@@ -100,7 +100,7 @@ int             main(int ac, char **av)
 
   premier.X = 1004;
   premier.Y = -15.00;
-  premier.rotation = 0;
+  premier.rotation = 315;
   premier.player_id = 2;
   premier.player_fd = 2;
 
