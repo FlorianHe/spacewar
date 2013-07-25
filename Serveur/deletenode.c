@@ -5,7 +5,7 @@
 ** Login   <helain_f@epitech.net>
 ** 
 ** Started on  Thu Jul 25 15:59:30 2013 Florian Helaine
-** Last update Thu Jul 25 16:14:36 2013 Florian Helaine
+** Last update Thu Jul 25 16:38:00 2013 Florian Helaine
 */
 
 #include	"serveur.h"
@@ -18,8 +18,7 @@ void		deletenode(t_player **list, int fd_pl)
   while (tmp != NULL)
     {
       if (tmp->player_fd == fd_pl)
-      	{
-	  tmp = NULL;
-	}
+	tmp->player_fd = 0;
+      tmp = tmp->next;
     }
 }
