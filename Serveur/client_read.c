@@ -5,7 +5,7 @@
 ** Login   <marcha_q@epitech.net>
 **
 ** Started on  Mon Jul 22 15:15:14 2013 Augustin Marchand
-** Last update Wed Jul 24 21:25:18 2013 Florian Helaine
+** Last update Thu Jul 25 15:49:38 2013 Florian Helaine
 */
 
 #include		<string.h>
@@ -20,7 +20,6 @@ void                    client_read(t_serv *e, int fd)
   r = read(fd, buff, 1024);
   if (r > 0)
     {
-      printf("buff === %s\n", buff);
       if (strcmp(buff, "Avance\n") == 0)
 	avance(&(e->next), fd);
       else if (strcmp(buff, "Droite\n") == 0)
@@ -28,7 +27,7 @@ void                    client_read(t_serv *e, int fd)
       else if (strcmp(buff, "Gauche\n") == 0)
 	gauche(&(e->next), fd);
       else if (strcmp(buff, "Tir\n") == 0)
-	write(fd, "Tir 150 150\n", strlen("Tir 150 150\n"));
+	tir(&(e->next), fd);
     }
   else
     {

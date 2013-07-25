@@ -5,7 +5,7 @@
 ** Login   <boumah_a@epitech.net>
 ** 
 ** Started on  Fri Jul 19 15:18:30 2013 adil boumahdi
-** Last update Thu Jul 25 15:04:42 2013 adil boumahdi
+** Last update Thu Jul 25 15:43:44 2013 Florian Helaine
 */
 
 #include	"serveur.h"
@@ -45,16 +45,8 @@ void		avance(t_player **list, int num_player)
       	{
 	  check_value(tmp);
 	  check_rotation(tmp);
-	  /* tmp->X = (tmp->X + cos(3.14 * tmp->rotation / 180.0)); */
-      	  /* tmp->Y = (tmp->Y + sin(3.14 * tmp->rotation / 180.0)); */
 	  check_value(tmp);
-	  /* printf("%f\n", tmp->X); */
-      	  /* printf("%f\n", tmp->Y); */
-      	  /* printf("%f\n", tmp->rotation); */
-      	  /* printf("%d\n", tmp->player_id); */
-	  /* tmp->essence = tmp->essence - coeff  gravité */
-	  printf("x == %d y == %d\n", tmp->X, tmp->Y);
-	  graph_avance(tmp->player_fd, tmp);
+	  graph_avance(list, tmp);
 	}
       tmp = tmp->next;
     }
@@ -82,45 +74,7 @@ void		addnode(t_player **start, t_player *node)
   new->rotation = node->rotation;
   new->player_id = node->player_id;
   new->player_fd = node->player_fd;
+  new->missile = node->missile;
   new->next = *start;
   *start = new;
-}
-
-int             main(int ac, char **av)
-{
-  t_player      *player;
-  t_player	premier;
-  t_player	deux;
-  t_player	trois;
-  int		num_player;
-
-  num_player = 2;
-
-  player =  malloc(sizeof(t_player));
-
-  premier.X = 1004;
-  premier.Y = -15.00;
-  premier.rotation = 0;
-  premier.player_id = 2;
-  premier.player_fd = 2;
-
-  /* deux.X = 20.00; */
-  /* deux.Y = 30.00; */
-  /* deux.rotation = 90; */
-  /* deux.player_id = 3; */
-  /* deux.player_fd = 3; */
-
-  /* trois.X = 99.00; */
-  /* trois.Y = 98.00; */
-  /* trois.rotation = 99; */
-  /* trois.player_id = 4; */
-  /* trois.player_fd = 4; */
-
-  player = NULL;
-
-  addnode(&player, &premier);
-  /* addnode(&player, &deux); */
-  /* addnode(&player, &trois); */
-
-  avance(&player, num_player);
 }

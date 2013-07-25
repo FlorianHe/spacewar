@@ -5,7 +5,7 @@
 ** Login   <boumah_a@epitech.net>
 ** 
 ** Started on  Thu Jul 18 18:36:04 2013 adil boumahdi
-** Last update Thu Jul 25 15:03:41 2013 adil boumahdi
+** Last update Thu Jul 25 15:40:17 2013 Florian Helaine
 */
 
 #include	<math.h>
@@ -32,6 +32,7 @@ typedef struct		s_player
   int			rotation;
   int			player_id;
   int			player_fd;
+  int			nb_missile;
   struct s_missile	*missile;
   struct s_player	*next;
 }			t_player;
@@ -40,6 +41,7 @@ typedef struct		s_missile
 {
   int			x;
   int			y;
+  int			rotation;
   struct s_missile	*next;
 }			t_missile;
 
@@ -49,9 +51,8 @@ typedef struct          s_rotation
   void                  (*funct)(t_player *);
 }                       t_rotation;
 
-void			tir2(t_player *);
+void			tir2(t_player **, t_player *);
 void			addmissile(t_missile **, t_missile *);
-void			test(t_missile **);
 void                    check_rotation(t_player *);
 void                    Zero(t_player *);
 void                    Forty_five(t_player *);
@@ -61,6 +62,5 @@ void                    Hundred_eighty(t_player *);
 void                    Hundred_twenty_five(t_player *);
 void                    Hundred_seventy(t_player *);
 void                    Hundred_fifteen(t_player *);
-
 
 #endif
