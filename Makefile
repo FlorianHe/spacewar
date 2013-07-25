@@ -5,7 +5,7 @@
 ## Login   <helain_f@epitech.net>
 ## 
 ## Started on  Mon Apr  8 12:24:41 2013 florian helaine
-## Last update Wed Jul 24 18:57:44 2013 Florian Helaine
+## Last update Thu Jul 25 14:04:33 2013 antoine paquet
 ##
 
 CLIENT=		client
@@ -38,10 +38,15 @@ OBJ_CLIENT=	$(SRC_CLIENT:.cpp=.o)
 
 OBJ_SERVER=	$(SRC_SERVER:.c=.o)
 
+LDFLAGS=	-lsfml-system \
+		-lsfml-window \
+		-lsfml-graphics \
+		-lsfml-network
+
 all:		client serveur
 
 client:		$(OBJ_CLIENT)
-		gcc -o $(CLIENT) $(OBJ_CLIENT)
+		g++ -o $(CLIENT) $(OBJ_CLIENT) $(LDFLAGS)
 
 serveur:	$(OBJ_SERVER)
 		gcc -o $(SERVER) $(OBJ_SERVER) -lm
