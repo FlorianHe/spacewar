@@ -5,7 +5,7 @@
 ## Login   <helain_f@epitech.net>
 ## 
 ## Started on  Mon Apr  8 12:24:41 2013 florian helaine
-## Last update Thu Jul 25 14:04:33 2013 antoine paquet
+## Last update Thu Jul 25 14:56:27 2013 antoine paquet
 ##
 
 CLIENT=		client
@@ -29,6 +29,7 @@ SRC_SERVER=	Serveur/add_client.c \
 		Serveur/avance.c \
 		Serveur/gauche.c \
 		Serveur/droite.c \
+		Serveur/tir.c \
 		Serveur/graph_avance.c \
 		Serveur/graph_gauche.c \
 		Serveur/graph_droite.c \

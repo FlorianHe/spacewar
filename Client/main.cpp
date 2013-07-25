@@ -5,7 +5,7 @@
 // Login   <paquet_a@epitech.net>
 // 
 // Started on  Tue Jul 23 13:25:12 2013 antoine paquet
-// Last update Thu Jul 25 13:48:45 2013 antoine paquet
+// Last update Thu Jul 25 14:55:21 2013 antoine paquet
 //
 
 #include <unistd.h>
@@ -29,7 +29,7 @@ void	moveTop(sf::SocketTCP Client)
   char Buffer[] = "Avance\n";
   if (Client.Send(Buffer, sizeof(Buffer)) != sf::Socket::Done)
     {
-      std::cout << "Error with Send\n";      
+      std::cout << "Error with Send\n";
     }
 
   char		Rep[128];
