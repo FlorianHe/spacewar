@@ -5,7 +5,7 @@
 ** Login   <boumah_a@epitech.net>
 ** 
 ** Started on  Fri Jul 19 15:18:30 2013 adil boumahdi
-** Last update Fri Jul 26 16:31:57 2013 adil boumahdi
+** Last update Fri Jul 26 16:42:55 2013 Florian Helaine
 */
 
 #include	"serveur.h"
@@ -46,7 +46,9 @@ void		avance(t_player **list, int num_player)
 	  check_value(tmp);
 	  check_rotation(tmp);
 	  check_value(tmp);
+	  tmp->essence--;
 	  graph_avance(list, tmp);
+	  graph_essence(list, tmp);
 	}
       tmp = tmp->next;
     }

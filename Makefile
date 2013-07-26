@@ -43,6 +43,7 @@ SRC_SERVER=	Serveur/add_client.c \
 		Serveur/graph_gauche.c \
 		Serveur/graph_droite.c \
 		Serveur/graph_tir.c \
+		Serveur/graph_essence.c \
 		Serveur/graph_mort.c \
 		Serveur/xmalloc.c \
 
