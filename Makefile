@@ -5,7 +5,7 @@
 ## Login   <helain_f@epitech.net>
 ## 
 ## Started on  Mon Jul 22 12:24:41 2013 florian helaine
-## Last update Thu Jul 25 16:04:53 2013 Florian Helaine
+## Last update Fri Jul 26 09:48:29 2013 Florian Helaine
 ##
 
 CLIENT=		client
@@ -29,7 +29,10 @@ SRC_SERVER=	Serveur/add_client.c \
 		Serveur/avance.c \
 		Serveur/gauche.c \
 		Serveur/droite.c \
+		Serveur/mort.c \
 		Serveur/tir.c \
+		Serveur/applique_gravite.c \
+		Serveur/gravite.c \
 		Serveur/deletenode.c \
 		Serveur/move_dir.c \
 		Serveur/move_dir2.c \
@@ -37,6 +40,7 @@ SRC_SERVER=	Serveur/add_client.c \
 		Serveur/graph_gauche.c \
 		Serveur/graph_droite.c \
 		Serveur/graph_tir.c \
+		Serveur/graph_mort.c \
 		Serveur/xmalloc.c \
 
 OBJ_CLIENT=	$(SRC_CLIENT:.cpp=.o)

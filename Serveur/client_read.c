@@ -5,7 +5,7 @@
 ** Login   <marcha_q@epitech.net>
 **
 ** Started on  Mon Jul 22 15:15:14 2013 Augustin Marchand
-** Last update Thu Jul 25 16:09:04 2013 Florian Helaine
+** Last update Fri Jul 26 11:47:36 2013 Florian Helaine
 */
 
 #include		<string.h>
@@ -32,6 +32,7 @@ void                    client_read(t_serv *e, int fd)
   else
     {
       printf("%d: Connection closed\n", fd);
+      graph_close(&(e->next), fd);
       deletenode(&(e->next), fd);
       e->fd_type[fd] = FD_FREE;
       close(fd);

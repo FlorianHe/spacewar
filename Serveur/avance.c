@@ -5,7 +5,7 @@
 ** Login   <boumah_a@epitech.net>
 ** 
 ** Started on  Fri Jul 19 15:18:30 2013 adil boumahdi
-** Last update Thu Jul 25 16:03:34 2013 Florian Helaine
+** Last update Fri Jul 26 10:16:59 2013 Florian Helaine
 */
 
 #include	"serveur.h"
@@ -70,10 +70,12 @@ void		addnode(t_player **start, t_player *node)
   new = xmalloc(sizeof(t_player));
   new->X = node->X;
   new->Y = node->Y;
-  new->essence = node->essence;
-  new->rotation = node->rotation;
+  new->time = 0;
+  new->essence = 80;
+  new->rotation = 0;
   new->player_id = node->player_id;
   new->player_fd = node->player_fd;
+  new->nb_missile = 0;
   new->missile = node->missile;
   new->next = *start;
   *start = new;

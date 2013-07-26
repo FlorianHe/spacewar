@@ -5,7 +5,7 @@
 ** Login   <boumah_a@epitech.net>
 ** 
 ** Started on  Thu Jul 18 18:36:04 2013 adil boumahdi
-** Last update Thu Jul 25 15:40:17 2013 Florian Helaine
+** Last update Fri Jul 26 09:52:45 2013 Florian Helaine
 */
 
 #include	<math.h>
@@ -28,6 +28,7 @@ typedef struct		s_player
 {
   int			X;
   int			Y;
+  int			time;
   int			essence;
   int			rotation;
   int			player_id;
