@@ -5,7 +5,7 @@
 ** Login   <boumah_a@epitech.net>
 ** 
 ** Started on  Fri Jul 19 15:18:30 2013 adil boumahdi
-** Last update Fri Jul 26 14:33:39 2013 Florian Helaine
+** Last update Fri Jul 26 16:31:57 2013 adil boumahdi
 */
 
 #include	"serveur.h"
@@ -41,7 +41,7 @@ void		avance(t_player **list, int num_player)
   tmp = *list;
   while (tmp != NULL)
     {
-      if (tmp->player_fd == num_player)
+      if (tmp->player_fd == num_player && tmp->essence > 0)
       	{
 	  check_value(tmp);
 	  check_rotation(tmp);
