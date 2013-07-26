@@ -5,7 +5,7 @@
 ** Login   <helain_f@epitech.net>
 ** 
 ** Started on  Thu Jul 25 14:21:17 2013 Florian Helaine
-** Last update Fri Jul 26 10:25:23 2013 Florian Helaine
+** Last update Fri Jul 26 15:08:21 2013 Florian Helaine
 */
 
 #include	"serveur.h"
@@ -17,7 +17,7 @@ void		graph_tir(t_player **list, t_missile *tir)
 
   tmp = *list;
   memset(buff, '\0', 254);
-  sprintf(buff, "Tir %d %d\n", tir->x, tir->y);
+  sprintf(buff, "Tir %d %d %d\n", tir->nb_tir, tir->x, tir->y);
   while (tmp != NULL)
     {
       write(1, buff, strlen(buff));

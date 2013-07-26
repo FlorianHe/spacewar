@@ -5,7 +5,7 @@
 ** Login   <boumah_a@epitech.net>
 ** 
 ** Started on  Mon Jul 22 13:36:43 2013 adil boumahdi
-** Last update Fri Jul 26 14:49:26 2013 Florian Helaine
+** Last update Fri Jul 26 15:11:11 2013 Florian Helaine
 */
 
 #include	"serveur.h"
@@ -30,15 +30,17 @@ void		*tir(t_player **list, int num_player)
     }
 }
 
-void			tir2(t_player **list, t_player *player)
+void		tir2(t_player **list, t_player *player)
 {
-  t_missile		*missile;
+  static int	i = 1;
+  t_missile	*missile;
 
   missile = xmalloc(sizeof(t_missile));
   missile->rotation = player->rotation;
   missile->x = player->X;
   missile->y = player->Y;
   pop_tir(missile);
+  missile->nb_tir = i++;
   graph_tir(list, missile);
   addmissile((&player->missile), missile);
 }
@@ -52,6 +54,7 @@ void            addmissile(t_missile **start, t_missile *node)
   new->y = node->y;
   new->rotation = node->rotation;
   new->time = 0;
+  new->nb_tir = node->nb_tir;
   new->next = *start;
   *start = new;
 }
