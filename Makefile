@@ -1,13 +1,3 @@
-##
-## Makefile for my_ftp in /home/helain_f/Semestre_3/Systeme_Unix/
-## 
-## Made by florian helaine
-## Login   <helain_f@epitech.net>
-## 
-## Started on  Mon Jul 22 12:24:41 2013 florian helaine
-## Last update Fri Jul 26 09:48:29 2013 Florian Helaine
-##
-
 CLIENT=		client
 
 SERVER=		serveur
@@ -26,6 +16,7 @@ SRC_SERVER=	Serveur/add_client.c \
 		Serveur/xbind.c \
 		Serveur/xlisten.c \
 		Serveur/xsocket.c \
+		Serveur/checking.c \
 		Serveur/avance.c \
 		Serveur/gauche.c \
 		Serveur/droite.c \

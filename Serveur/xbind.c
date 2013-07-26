@@ -5,18 +5,19 @@
 ** Login   <marcha_q@epitech.net>
 **
 ** Started on  Mon Jul 22 14:43:11 2013 Augustin Marchand
-** Last update Fri Jul 26 09:57:24 2013 Florian Helaine
+** Last update Fri Jul 26 18:28:33 2013 Augustin Marchand
 */
 
 #include                        <netdb.h>
 #include                        <stdlib.h>
+#include			"serveur.h"
 
-void				xbind(int fd)
+void				xbind(int fd, t_serv *e)
 {
   struct sockaddr_in		sin;
 
   sin.sin_family = AF_INET;
-  sin.sin_port = htons(4242);
+  sin.sin_port = htons(e->port);
   sin.sin_addr.s_addr = INADDR_ANY;
   if (bind(fd, (const struct sockaddr *)&sin, sizeof(sin)) == -1)
     {

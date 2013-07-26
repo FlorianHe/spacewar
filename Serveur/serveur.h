@@ -5,7 +5,7 @@
 ** Login   <marcha_q@epitech.net>
 **
 ** Started on  Mon Jul 22 14:48:51 2013 Augustin Marchand
-** Last update Wed Jul 24 19:02:05 2013 Florian Helaine
+** Last update Fri Jul 26 18:26:15 2013 Augustin Marchand
 */
 
 #ifndef			SERVEUR_H__
@@ -27,6 +27,7 @@ typedef struct		s_serv
 {
   int			player;
   int			game;
+  int			port;
   int			id_player;
   int			fd_type[MAX_FD];
   ptr			fct_read[MAX_FD];

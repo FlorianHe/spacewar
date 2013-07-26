@@ -5,7 +5,7 @@
 ** Login   <marcha_q@epitech.net>
 **
 ** Started on  Mon Jul 22 15:15:14 2013 Augustin Marchand
-** Last update Fri Jul 26 11:47:36 2013 Florian Helaine
+** Last update Fri Jul 26 18:38:00 2013 Augustin Marchand
 */
 
 #include		<string.h>
@@ -14,10 +14,11 @@
 void                    client_read(t_serv *e, int fd)
 {
   int                   r;
-  char                  buff[1024];
+  char                  buff[124];
 
-  memset(buff, '\0', 1024);
-  r = read(fd, buff, 1024);
+  memset(buff, '\0', 124);
+  r = read(fd, buff, 124);
+  printf("%s", buff);
   if (r > 0)
     {
       if (strcmp(buff, "Avance\n") == 0)
