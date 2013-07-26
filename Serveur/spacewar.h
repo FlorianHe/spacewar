@@ -5,7 +5,7 @@
 ** Login   <boumah_a@epitech.net>
 ** 
 ** Started on  Thu Jul 18 18:36:04 2013 adil boumahdi
-** Last update Fri Jul 26 09:52:45 2013 Florian Helaine
+** Last update Fri Jul 26 14:49:36 2013 Florian Helaine
 */
 
 #include	<math.h>
@@ -43,6 +43,7 @@ typedef struct		s_missile
   int			x;
   int			y;
   int			rotation;
+  int			time;
   struct s_missile	*next;
 }			t_missile;
 
@@ -51,6 +52,12 @@ typedef struct          s_rotation
   int                   rotation_;
   void                  (*funct)(t_player *);
 }                       t_rotation;
+
+typedef struct          s_rotation_tir
+{
+  int                   rotation_;
+  void                  (*funct)(t_missile *, int);
+}                       t_rotation_tir;
 
 void			tir2(t_player **, t_player *);
 void			addmissile(t_missile **, t_missile *);
@@ -63,5 +70,13 @@ void                    Hundred_eighty(t_player *);
 void                    Hundred_twenty_five(t_player *);
 void                    Hundred_seventy(t_player *);
 void                    Hundred_fifteen(t_player *);
+void			Zero_tir(t_missile *, int);
+void			Forty_five_tir(t_missile *, int);
+void			Ninety_tir(t_missile *, int);
+void			Hundred_thirty_five_tir(t_missile *, int);
+void			Hundred_eighty_tir(t_missile *, int);
+void			Hundred_twenty_five_tir(t_missile *, int);
+void		        Hundred_seventy_tir(t_missile *, int);
+void			Hundred_fifteen_tir(t_missile *, int);
 
 #endif

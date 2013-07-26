@@ -5,7 +5,7 @@
 ** Login   <helain_f@epitech.net>
 ** 
 ** Started on  Fri Jul 26 10:25:06 2013 Florian Helaine
-** Last update Fri Jul 26 11:33:39 2013 Florian Helaine
+** Last update Fri Jul 26 14:55:06 2013 Florian Helaine
 */
 
 #include	"serveur.h"
@@ -20,11 +20,11 @@ void		graph_mort(t_player **list, t_player *pl)
   sprintf(buff, "Mor %d\n", pl->player_id);
   while (tmp != NULL)
     {
-      write(1, buff, strlen(buff));
       if (tmp->player_fd != 0)
 	write(tmp->player_fd, buff, strlen(buff));
       tmp = tmp->next;
     }
+  printf("Le joueur %d est mort\n", pl->player_id);
 }
 
 void		graph_close(t_player **list, int fd)
@@ -45,9 +45,9 @@ void		graph_close(t_player **list, int fd)
   tmp = *list;
   while (tmp != NULL)
     {
-      write(1, buff, strlen(buff));
       if (tmp->player_fd != 0)
 	write(tmp->player_fd, buff, strlen(buff));
       tmp = tmp->next;
     }
+  printf("Le joueur %d s'est suicidé\n", id);
 }

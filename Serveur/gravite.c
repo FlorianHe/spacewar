@@ -5,7 +5,7 @@
 ** Login   <helain_f@epitech.net>
 ** 
 ** Started on  Wed Jul 24 18:33:48 2013 Florian Helaine
-** Last update Fri Jul 26 10:22:54 2013 Florian Helaine
+** Last update Fri Jul 26 14:09:54 2013 Florian Helaine
 */
 
 #include	"serveur.h"
@@ -18,7 +18,10 @@ void		gravite(t_player **list)
   while (tmp != NULL)
     {
       if (tmp->player_fd != 0)
-	applique_gravite(list, tmp);
+	{
+	  applique_gravite(list, tmp);
+	  move_tir(list, tmp);
+	}
       tmp = tmp->next;
     }
 }

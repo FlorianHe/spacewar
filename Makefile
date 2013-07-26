@@ -34,8 +34,11 @@ SRC_SERVER=	Serveur/add_client.c \
 		Serveur/applique_gravite.c \
 		Serveur/gravite.c \
 		Serveur/deletenode.c \
+		Serveur/move_tir.c \
 		Serveur/move_dir.c \
 		Serveur/move_dir2.c \
+		Serveur/move_dir_tir.c \
+		Serveur/move_dir_tir2.c \
 		Serveur/graph_avance.c \
 		Serveur/graph_gauche.c \
 		Serveur/graph_droite.c \
