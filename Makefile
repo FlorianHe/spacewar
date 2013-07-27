@@ -24,6 +24,7 @@ SRC_SERVER=	Serveur/add_client.c \
 		Serveur/mort.c \
 		Serveur/tir.c \
 		Serveur/applique_gravite.c \
+		Serveur/applique_gravite_tir.c \
 		Serveur/gravite.c \
 		Serveur/deletenode.c \
 		Serveur/move_tir.c \

@@ -5,7 +5,7 @@
 ** Login   <boumah_a@epitech.net>
 ** 
 ** Started on  Mon Jul 22 13:36:43 2013 adil boumahdi
-** Last update Fri Jul 26 15:11:11 2013 Florian Helaine
+** Last update Sat Jul 27 18:26:20 2013 Florian Helaine
 */
 
 #include	"serveur.h"
@@ -42,7 +42,7 @@ void		tir2(t_player **list, t_player *player)
   pop_tir(missile);
   missile->nb_tir = i++;
   graph_tir(list, missile);
-  addmissile((&player->missile), missile);
+  addmissile(&(player->missile), missile);
 }
 
 void            addmissile(t_missile **start, t_missile *node)
@@ -54,6 +54,7 @@ void            addmissile(t_missile **start, t_missile *node)
   new->y = node->y;
   new->rotation = node->rotation;
   new->time = 0;
+  new->time_grav = 0;
   new->nb_tir = node->nb_tir;
   new->next = *start;
   *start = new;

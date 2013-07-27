@@ -5,7 +5,7 @@
 ** Login   <boumah_a@epitech.net>
 ** 
 ** Started on  Thu Jul 18 18:36:04 2013 adil boumahdi
-** Last update Fri Jul 26 14:59:08 2013 Florian Helaine
+** Last update Sat Jul 27 18:26:08 2013 Florian Helaine
 */
 
 #include	<math.h>
@@ -45,6 +45,7 @@ typedef struct		s_missile
   int			rotation;
   int			nb_tir;
   int			time;
+  int			time_grav;
   struct s_missile	*next;
 }			t_missile;
 

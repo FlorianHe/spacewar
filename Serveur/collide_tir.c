@@ -5,7 +5,7 @@
 ** Login   <helain_f@epitech.net>
 ** 
 ** Started on  Sat Jul 27 17:28:06 2013 Florian Helaine
-** Last update Sat Jul 27 18:03:54 2013 Florian Helaine
+** Last update Sat Jul 27 18:20:02 2013 Florian Helaine
 */
 
 #include	"serveur.h"
@@ -32,11 +32,11 @@ void		collide_vaisseau(t_player **list, t_missile *tir)
 
 void		collide_tir(t_player **list, t_player *pl, t_missile *tir)
 {
+  collide_vaisseau(list, tir);
   if (tir->x < 0 || tir->x > 800 || tir->y < 0 || tir->y > 800)
     deletemissile(pl, tir);
   else if (tir->x >= 385 && tir->x <= 415)
     deletemissile(pl, tir);
   else if (tir->y >= 385 && tir->y <= 415)
     deletemissile(pl, tir);
-  collide_vaisseau(list, tir);
 }

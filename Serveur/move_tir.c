@@ -5,7 +5,7 @@
 ** Login   <helain_f@epitech.net>
 ** 
 ** Started on  Fri Jul 26 14:10:07 2013 Florian Helaine
-** Last update Sat Jul 27 17:53:11 2013 Florian Helaine
+** Last update Sat Jul 27 18:28:25 2013 Florian Helaine
 */
 
 #include	"serveur.h"
@@ -37,7 +37,8 @@ void		move_tir(t_player **list, t_player *pl)
       if (j != 8 && tmp2->time >= 3500 && tmp2->nb_tir != 0)
 	{
 	  tab_value_tir[j].funct(tmp2, 1);
-	  collide_tir(list, tmp2, pl);
+	  gravite_tir(list, tmp2);
+	  collide_tir(list, pl, tmp2);
 	  graph_tir(list, tmp2);
 	  tmp2->time = 0;
 	}
