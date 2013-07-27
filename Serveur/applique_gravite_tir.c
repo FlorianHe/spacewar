@@ -5,7 +5,7 @@
 ** Login   <helain_f@epitech.net>
 ** 
 ** Started on  Sat Jul 27 18:21:45 2013 Florian Helaine
-** Last update Sat Jul 27 18:36:08 2013 Florian Helaine
+** Last update Sat Jul 27 18:51:27 2013 adil boumahdi
 */
 
 #include	"serveur.h"
@@ -44,7 +44,8 @@ void		gravite_tir(t_player **list, t_missile *tir)
     {
       if (tir->x >= 0 && tir->x <= 400 && tir->y >= 0 && tir->y <= 400)
 	gravite_top_left_tir(list, tir);
-      else if (tir->x >= 400 && tir->x <= 800 && tir->y <= 800 && tir->y >= 400)
+      else if (tir->x >= 400 && tir->x <= 800 && tir->y <= 800 &&
+	       tir->y >= 400)
 	gravite_bot_right_tir(list, tir);
       else if (tir->x >= 0 && tir->x <= 400 && tir->y <= 800 && tir->y >= 400)
 	gravite_bot_left_tir(list, tir);

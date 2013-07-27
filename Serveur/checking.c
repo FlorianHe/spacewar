@@ -5,7 +5,7 @@
 ** Login   <marcha_q@epitech.net>
 **
 ** Started on  Fri Jul 26 18:22:45 2013 Augustin Marchand
-** Last update Fri Jul 26 18:30:41 2013 Augustin Marchand
+** Last update Sat Jul 27 18:51:48 2013 adil boumahdi
 */
 
 #include			"serveur.h"
@@ -15,7 +15,7 @@ void				checking(t_serv *e, int ac, char *av[])
   int				i;
 
   i = 1;
-  while(i != ac)
+  while (i != ac)
     {
       if (strcmp(av[i], "-n") == 0 && e->player == 2 && i + 1 < ac)
         e->player = atoi(av[i + 1]);
