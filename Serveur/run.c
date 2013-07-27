@@ -5,7 +5,7 @@
 ** Login   <marcha_q@epitech.net>
 **
 ** Started on  Mon Jul 22 15:04:56 2013 Augustin Marchand
-** Last update Fri Jul 26 11:48:14 2013 Florian Helaine
+** Last update Sat Jul 27 18:01:16 2013 Florian Helaine
 */
 
 #include                <sys/time.h>
@@ -31,7 +31,7 @@ void                    run(t_serv *e)
       if (FD_ISSET(i, &fd_read))
         e->fct_read[i](e, i);
       gravite(&(e->next));
-      mort(&(e->next));
+      mort(&(e->next), e);
       i++;
     }
 }

@@ -20,6 +20,7 @@ SRC_SERVER=	Serveur/add_client.c \
 		Serveur/avance.c \
 		Serveur/gauche.c \
 		Serveur/droite.c \
+		Serveur/collide_tir.c \
 		Serveur/mort.c \
 		Serveur/tir.c \
 		Serveur/applique_gravite.c \

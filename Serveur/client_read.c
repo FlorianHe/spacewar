@@ -5,7 +5,7 @@
 ** Login   <marcha_q@epitech.net>
 **
 ** Started on  Mon Jul 22 15:15:14 2013 Augustin Marchand
-** Last update Fri Jul 26 18:38:00 2013 Augustin Marchand
+** Last update Sat Jul 27 17:23:40 2013 Florian Helaine
 */
 
 #include		<string.h>
@@ -18,7 +18,6 @@ void                    client_read(t_serv *e, int fd)
 
   memset(buff, '\0', 124);
   r = read(fd, buff, 124);
-  printf("%s", buff);
   if (r > 0)
     {
       if (strcmp(buff, "Avance\n") == 0)

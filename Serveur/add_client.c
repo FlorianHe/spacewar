@@ -5,7 +5,7 @@
 ** Login   <marcha_q@epitech.net>
 **
 ** Started on  Mon Jul 22 15:01:38 2013 Augustin Marchand
-** Last update Fri Jul 26 10:30:28 2013 Florian Helaine
+** Last update Sat Jul 27 17:58:13 2013 Florian Helaine
 */
 
 #include			"serveur.h"
@@ -32,7 +32,6 @@ void				init_player(t_serv *serv, int fd)
   tmp = serv->next;
   while (tmp != NULL)
     {
-      write(1, buff, strlen(buff));
       if (tmp->player_fd != 0)
 	write(tmp->player_fd, buff, strlen(buff));
       tmp = tmp->next;

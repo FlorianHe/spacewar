@@ -5,7 +5,7 @@
 ** Login   <helain_f@epitech.net>
 ** 
 ** Started on  Wed Jul 24 21:08:03 2013 Florian Helaine
-** Last update Fri Jul 26 10:18:23 2013 Florian Helaine
+** Last update Sat Jul 27 17:55:05 2013 Florian Helaine
 */
 
 #include	"serveur.h"
@@ -20,9 +20,11 @@ void		graph_droite(t_player **list, t_player *perso)
   sprintf(buff, "Dro %d %d\n", perso->player_id, perso->rotation);
   while (tmp != NULL)
     {
-      write(1, buff, strlen(buff));
       if (tmp->player_fd != 0)
-	write(tmp->player_fd, buff, strlen(buff));
+	{
+	  write(1, buff, strlen(buff));
+	  write(tmp->player_fd, buff, strlen(buff));
+	}
       tmp = tmp->next;
     }
 }
