@@ -1,8 +1,26 @@
+##
+## Makefile for spacewar in /home/helain_f/Semestre_3/Systeme_Unix/spacewar
+## 
+## Made by Florian Helaine
+## Login   <helain_f@epitech.net>
+## 
+## Started on  Mon Jul  22 12:24:41 2013 Florian Helaine
+## Last update Sun Jul 28 13:48:55 2013 Florian Helaine
+##
+
 CLIENT=		client
 
 SERVER=		serveur
 
-SRC_CLIENT=	Client/main.cpp
+SRC_CLIENT=	Client/main.cpp \
+		Client/AObject.cpp \
+		Client/Except.cpp \
+		Client/Network.cpp \
+		Client/Position.cpp \
+		Client/Ship.cpp \
+		Client/Shoot.cpp \
+		Client/SpaceWar.cpp \
+		Client/Sun.cpp \
 
 SRC_SERVER=	Serveur/add_client.c \
 		Serveur/client_read.c \
@@ -44,10 +62,7 @@ OBJ_CLIENT=	$(SRC_CLIENT:.cpp=.o)
 
 OBJ_SERVER=	$(SRC_SERVER:.c=.o)
 
-LDFLAGS=	-lsfml-system \
-		-lsfml-window \
-		-lsfml-graphics \
-		-lsfml-network
+LDFLAGS=	-lsfml-system -lsfml-window -lsfml-graphics -lsfml-network
 
 all:		client serveur
 
