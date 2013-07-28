@@ -5,7 +5,7 @@
 // Login   <paquet_a@epitech.net>
 // 
 // Started on  Sun Jul 28 03:09:59 2013 antoine paquet
-// Last update Sun Jul 28 06:03:49 2013 antoine paquet
+// Last update Sun Jul 28 13:59:42 2013 antoine paquet
 //
 
 #include "SpaceWar.hh"
@@ -29,13 +29,13 @@ SpaceWar::~SpaceWar()
 
 void				SpaceWar::initialize()
 {
-  if (!this->_ship1.LoadFromFile("./sprite/ship.jpg"))
+  if (!this->_ship1.LoadFromFile("./Client/sprite/ship.jpg"))
     throw Except("Error loadfromfile");
   this->_ship2.SetImage(this->_ship1);
-  if (!this->_sun1.LoadFromFile("./sprite/sun.jpg"))
+  if (!this->_sun1.LoadFromFile("./Client/sprite/sun.jpg"))
     throw Except("Error loadfromfile");
   this->_sun2.SetImage(this->_sun1);
-  if (!this->_shoot1.LoadFromFile("./sprite/shoot.jpg"))
+  if (!this->_shoot1.LoadFromFile("./Client/sprite/shoot.jpg"))
     throw Except("Error loadfromfile");
   this->_shoot2.SetImage(this->_shoot1);
   this->_app.Create(sf::VideoMode(800, 800, 32), "SpaceWar");
