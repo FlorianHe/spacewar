@@ -5,7 +5,7 @@
 // Login   <paquet_a@epitech.net>
 // 
 // Started on  Sun Jul 28 03:09:59 2013 antoine paquet
-// Last update Sun Jul 28 14:51:06 2013 antoine paquet
+// Last update Sun Jul 28 15:07:58 2013 antoine paquet
 //
 
 #include "SpaceWar.hh"
@@ -128,8 +128,9 @@ void			SpaceWar::update()
 
 void			SpaceWar::draw()
 {
-  std::vector<Ship *>::iterator	it;
-  int			        i;
+  std::vector<Ship *>::iterator		it;
+  std::vector<Shoot *>::iterator	it2;
+  int					i;
 
   i = 0;
   this->_app.Clear(sf::Color(0, 0, 0));
@@ -137,11 +138,22 @@ void			SpaceWar::draw()
     {
       it = this->_ships.begin();
       while (it != this->_ships.end())
-	{
-	  this->_ships[i]->draw(*this);
-	  ++i;  
-	  ++it;
-	}
+        {
+          this->_ships[i]->draw(*this);
+          ++i;
+          ++it;
+        }
+    }
+  i = 0;
+  if (!this->_shoots.empty())
+    {
+      it2 = this->_shoots.begin();
+      while (it2 != this->_shoots.end())
+        {
+          this->_shoots[i]->draw(*this);
+          ++i;
+          ++it2;
+        }
     }
   this->_sun->draw(*this);
   this->_app.Display();
