@@ -5,7 +5,7 @@
 ## Login   <helain_f@epitech.net>
 ## 
 ## Started on  Mon Jul  22 12:24:41 2013 Florian Helaine
-## Last update Sun Jul 28 13:48:55 2013 Florian Helaine
+## Last update Sun Jul 28 14:17:17 2013 antoine paquet
 ##
 
 CLIENT=		client
@@ -62,7 +62,10 @@ OBJ_CLIENT=	$(SRC_CLIENT:.cpp=.o)
 
 OBJ_SERVER=	$(SRC_SERVER:.c=.o)
 
-LDFLAGS=	-lsfml-system -lsfml-window -lsfml-graphics -lsfml-network
+LDFLAGS=	-lsfml-system \
+		-lsfml-window \
+		-lsfml-graphics \
+		-lsfml-network
 
 all:		client serveur
 
