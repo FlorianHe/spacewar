@@ -5,7 +5,7 @@
 ** Login   <boumah_a@epitech.net>
 ** 
 ** Started on  Fri Jul 19 15:18:30 2013 adil boumahdi
-** Last update Fri Jul 26 16:42:55 2013 Florian Helaine
+** Last update Sun Jul 28 11:16:24 2013 Florian Helaine
 */
 
 #include	"serveur.h"
@@ -73,7 +73,7 @@ void		addnode(t_player **start, t_player *node)
   new->X = node->X;
   new->Y = node->Y;
   new->time = 0;
-  new->essence = 80;
+  new->essence = 99;
   new->rotation = 0;
   new->player_id = node->player_id;
   new->player_fd = node->player_fd;

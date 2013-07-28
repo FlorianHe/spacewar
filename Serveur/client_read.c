@@ -5,36 +5,53 @@
 ** Login   <marcha_q@epitech.net>
 **
 ** Started on  Mon Jul 22 15:15:14 2013 Augustin Marchand
-** Last update Sat Jul 27 17:23:40 2013 Florian Helaine
+** Last update Sun Jul 28 11:26:47 2013 Florian Helaine
 */
 
 #include		<string.h>
 #include		"serveur.h"
 
+void			connection_close(t_serv *serv, int fd)
+{
+  printf("%d: Connection closed\n", fd);
+  graph_close(&(serv->next), fd);
+  deletenode(&(serv->next), fd);
+  serv->fd_type[fd] = FD_FREE;
+  close(fd);
+}
+
+void			exec_cmd(t_serv *serv, int fd, char *buff)
+{
+  if (strcmp(buff, "Avance\n") == 0)
+    avance(&(serv->next), fd);
+  else if (strcmp(buff, "Droite\n") == 0)
+    droite(&(serv->next), fd);
+  else if (strcmp(buff, "Gauche\n") == 0)
+    gauche(&(serv->next), fd);
+  else if (strcmp(buff, "Tir\n") == 0)
+    tir(&(serv->next), fd);
+}
+
 void                    client_read(t_serv *e, int fd)
 {
   int                   r;
-  char                  buff[124];
+  char                  tmp[2];
+  char			*buff;
 
-  memset(buff, '\0', 124);
-  r = read(fd, buff, 124);
+  asprintf(&buff, "");
+  while (strcmp(tmp, "\n") != 0)
+    {
+      memset(tmp, '\0', 2);
+      r = read(fd, tmp, 1);
+      if (r <= 0)
+	{
+	  connection_close(e, fd);
+	  sprintf(tmp, "\n");
+	}
+      asprintf(&buff, "%s%s", buff, tmp);
+    }
+  printf("%s\n", buff);
   if (r > 0)
-    {
-      if (strcmp(buff, "Avance\n") == 0)
-	avance(&(e->next), fd);
-      else if (strcmp(buff, "Droite\n") == 0)
-	droite(&(e->next), fd);
-      else if (strcmp(buff, "Gauche\n") == 0)
-	gauche(&(e->next), fd);
-      else if (strcmp(buff, "Tir\n") == 0)
-	tir(&(e->next), fd);
-    }
-  else
-    {
-      printf("%d: Connection closed\n", fd);
-      graph_close(&(e->next), fd);
-      deletenode(&(e->next), fd);
-      e->fd_type[fd] = FD_FREE;
-      close(fd);
-    }
+    exec_cmd(e, fd, buff);
+  free(buff);
 }
