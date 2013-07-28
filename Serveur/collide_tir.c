@@ -5,15 +5,16 @@
 ** Login   <helain_f@epitech.net>
 ** 
 ** Started on  Sat Jul 27 17:28:06 2013 Florian Helaine
-** Last update Sat Jul 27 18:20:02 2013 Florian Helaine
+** Last update Sun Jul 28 13:55:22 2013 Florian Helaine
 */
 
 #include	"serveur.h"
 
-void		deletemissile(t_player *player, t_missile *tir)
+void		deletemissile(t_player **l, t_player *pl, t_missile *tir)
 {
+  graph_tir_suppr(l, tir);
   tir->nb_tir = 0;
-  player->nb_missile--;
+  pl->nb_missile--;
 }
 
 void		collide_vaisseau(t_player **list, t_missile *tir)
@@ -34,9 +35,9 @@ void		collide_tir(t_player **list, t_player *pl, t_missile *tir)
 {
   collide_vaisseau(list, tir);
   if (tir->x < 0 || tir->x > 800 || tir->y < 0 || tir->y > 800)
-    deletemissile(pl, tir);
+    deletemissile(list, pl, tir);
   else if (tir->x >= 385 && tir->x <= 415)
-    deletemissile(pl, tir);
+    deletemissile(list, pl, tir);
   else if (tir->y >= 385 && tir->y <= 415)
-    deletemissile(pl, tir);
+    deletemissile(list, pl, tir);
 }
