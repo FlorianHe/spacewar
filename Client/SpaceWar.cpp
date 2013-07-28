@@ -5,7 +5,7 @@
 // Login   <paquet_a@epitech.net>
 // 
 // Started on  Sun Jul 28 03:09:59 2013 antoine paquet
-// Last update Sun Jul 28 13:59:42 2013 antoine paquet
+// Last update Sun Jul 28 14:23:20 2013 antoine paquet
 //
 
 #include "SpaceWar.hh"
@@ -116,12 +116,12 @@ void			SpaceWar::update()
       if (input.IsKeyDown(sf::Key::Left))
         {
 	  std::cout << "[SENDING] : Gauche\\n" << std::endl;
-	  this->_network->sending("Left\\n");
+	  this->_network->sending("Gauche\n");
         }
       if (input.IsKeyDown(sf::Key::Space))
         {
 	  std::cout << "[SENDING] : Tir\\n" << std::endl;
-	  this->_network->sending("Tir\\n");
+	  this->_network->sending("Tir\n");
         }
     }
 }
