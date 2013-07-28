@@ -5,7 +5,7 @@
 // Login   <paquet_a@epitech.net>
 // 
 // Started on  Sun Jul 28 05:54:10 2013 antoine paquet
-// Last update Sun Jul 28 14:49:54 2013 antoine paquet
+// Last update Sun Jul 28 19:54:23 2013 bastien debret
 //
 
 #ifndef __SHOOT_HH__
@@ -20,7 +20,7 @@ protected:
   int  		_nb;
 
 public:
-  Shoot(int x, int y, sf::Sprite sprite, int nb);
+  Shoot(int const &, int const &, sf::Sprite const &, int const &);
   ~Shoot();
 
   void 		draw(SpaceWar &game);

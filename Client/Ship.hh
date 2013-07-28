@@ -5,7 +5,7 @@
 // Login   <paquet_a@epitech.net>
 // 
 // Started on  Sun Jul 28 06:00:48 2013 antoine paquet
-// Last update Sun Jul 28 14:55:08 2013 antoine paquet
+// Last update Sun Jul 28 19:53:31 2013 bastien debret
 //
 
 #ifndef __SHIP_HH__
@@ -20,13 +20,13 @@ protected:
   int			_nb;
 
 public:
-  Ship(int nb, int x, int y, int dir, sf::Sprite sprite);
+  Ship(int const &nb, int const &x, int const &y, int const &dir, sf::Sprite const &sprite);
   ~Ship();
 
   void			draw(SpaceWar &game);
 
-  void			setPos(int x, int y);
-  void			setDir(int dir);
+  void			setPos(int const &x, int const &y);
+  void			setDir(int const &dir);
 
   int			getNb() const;
 };

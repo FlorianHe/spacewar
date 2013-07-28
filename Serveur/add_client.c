@@ -5,7 +5,7 @@
 ** Login   <marcha_q@epitech.net>
 **
 ** Started on  Mon Jul 22 15:01:38 2013 Augustin Marchand
-** Last update Sat Jul 27 17:58:13 2013 Florian Helaine
+** Last update Sun Jul 28 20:47:54 2013 Florian Helaine
 */
 
 #include			"serveur.h"
@@ -18,10 +18,10 @@ void				init_player(t_serv *serv, int fd)
 
   new.X = rand() % 800;
   new.Y = rand() % 800;
-  if (new.X <= 500 && new.X >= 300)
+  if (new.X >= 300 && new.X <= 500)
     new.X = rand() % 300;
-  if (new.Y <= 500 && new.Y >= 300)
-    new.X = rand() % 300;
+  if (new.Y >= 300 && new.Y <= 500)
+    new.Y = rand() % 300;
   new.player_id = serv->id_player++;
   new.player_fd = fd;
   new.missile = NULL;

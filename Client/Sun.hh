@@ -5,7 +5,7 @@
 // Login   <paquet_a@epitech.net>
 // 
 // Started on  Sun Jul 28 05:55:33 2013 antoine paquet
-// Last update Sun Jul 28 14:56:47 2013 antoine paquet
+// Last update Sun Jul 28 19:55:46 2013 bastien debret
 //
 
 #ifndef __SUN_HH__
@@ -17,7 +17,7 @@
 class	       	Sun : public AObject
 {
 public:
-  Sun(int x, int y, sf::Sprite sprite);
+  Sun(int const &x, int const &y, sf::Sprite const &sprite);
   ~Sun();
 
   void 		draw(SpaceWar &game);

@@ -5,13 +5,13 @@
 // Login   <paquet_a@epitech.net>
 // 
 // Started on  Sun Jul 28 05:53:29 2013 antoine paquet
-// Last update Sun Jul 28 14:49:40 2013 antoine paquet
+// Last update Sun Jul 28 19:54:24 2013 bastien debret
 //
 
 #include "Shoot.hh"
 #include "SpaceWar.hh"
 
-Shoot::Shoot(int x, int y, sf::Sprite sprite, int nb)
+Shoot::Shoot(int const &x, int const &y, sf::Sprite const &sprite, int const &nb)
   : AObject(x, y, sprite), _nb(nb)
 {
 }

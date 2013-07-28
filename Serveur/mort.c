@@ -5,7 +5,7 @@
 ** Login   <helain_f@epitech.net>
 ** 
 ** Started on  Fri Jul 26 10:24:17 2013 Florian Helaine
-** Last update Sat Jul 27 17:57:21 2013 Florian Helaine
+** Last update Sun Jul 28 20:53:20 2013 Florian Helaine
 */
 
 #include	"serveur.h"
@@ -17,7 +17,6 @@ void		is_dead(t_player **list, t_player *pl, t_serv *serv)
   fd = pl->player_fd;
   graph_mort(list, pl);
   deletenode(list, pl->player_fd);
-  pl->player_fd = 0;
   serv->fd_type[fd] = FD_FREE;
   close(fd);
 }

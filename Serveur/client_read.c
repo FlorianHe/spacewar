@@ -5,7 +5,7 @@
 ** Login   <marcha_q@epitech.net>
 **
 ** Started on  Mon Jul 22 15:15:14 2013 Augustin Marchand
-** Last update Sun Jul 28 11:26:47 2013 Florian Helaine
+** Last update Sun Jul 28 20:51:20 2013 Florian Helaine
 */
 
 #include		<string.h>
@@ -50,7 +50,6 @@ void                    client_read(t_serv *e, int fd)
 	}
       asprintf(&buff, "%s%s", buff, tmp);
     }
-  printf("%s\n", buff);
   if (r > 0)
     exec_cmd(e, fd, buff);
   free(buff);

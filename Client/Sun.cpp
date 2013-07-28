@@ -5,13 +5,13 @@
 // Login   <paquet_a@epitech.net>
 // 
 // Started on  Sun Jul 28 05:55:42 2013 antoine paquet
-// Last update Sun Jul 28 14:56:23 2013 antoine paquet
+// Last update Sun Jul 28 19:55:48 2013 bastien debret
 //
 
 #include "Sun.hh"
 #include "SpaceWar.hh"
 
-Sun::Sun(int x, int y, sf::Sprite sprite)
+Sun::Sun(int const &x, int const &y, sf::Sprite const &sprite)
   : AObject(x, y, sprite)
 {
 }

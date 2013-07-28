@@ -5,7 +5,7 @@
 // Login   <paquet_a@epitech.net>
 // 
 // Started on  Sun Jul 28 05:51:55 2013 antoine paquet
-// Last update Sun Jul 28 14:53:18 2013 antoine paquet
+// Last update Sun Jul 28 19:51:53 2013 bastien debret
 //
 
 #ifndef __POSITION_HH__
@@ -20,12 +20,12 @@ protected:
   int		_y;
 
 public:
-  Position(int x, int y);
+  Position(int const &x, int const &y);
   ~Position();
 
 public:
-  void		setX(int x);
-  void		setY(int y);
+  void		setX(int const &x);
+  void		setY(int const &y);
 
 public:
   int		getX() const;

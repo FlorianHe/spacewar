@@ -5,7 +5,7 @@
 // Login   <paquet_a@epitech.net>
 // 
 // Started on  Sun Jul 28 05:57:22 2013 antoine paquet
-// Last update Sun Jul 28 14:48:10 2013 antoine paquet
+// Last update Sun Jul 28 19:49:17 2013 bastien debret
 //
 
 #ifndef __AOBJECT_HH__
@@ -26,8 +26,8 @@ protected:
   sf::Sprite		_sprite;
 
 public:
-  AObject(int x, int y, sf::Sprite sprite);
-  virtual ~AObject();
+  AObject(int const &, int const &, sf::Sprite const &sprite);
+  virtual		~AObject();
 
   virtual void	       	draw(SpaceWar &game) = 0;
 };
