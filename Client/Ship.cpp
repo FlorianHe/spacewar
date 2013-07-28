@@ -5,7 +5,7 @@
 // Login   <paquet_a@epitech.net>
 // 
 // Started on  Sun Jul 28 05:53:11 2013 antoine paquet
-// Last update Sun Jul 28 06:01:28 2013 antoine paquet
+// Last update Sun Jul 28 14:53:40 2013 antoine paquet
 //
 
 #include "Ship.hh"

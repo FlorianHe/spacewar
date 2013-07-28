@@ -5,7 +5,7 @@
 // Login   <paquet_a@epitech.net>
 // 
 // Started on  Sun Jul 28 05:57:22 2013 antoine paquet
-// Last update Sun Jul 28 05:57:57 2013 antoine paquet
+// Last update Sun Jul 28 14:48:10 2013 antoine paquet
 //
 
 #ifndef __AOBJECT_HH__

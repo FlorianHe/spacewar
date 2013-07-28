@@ -5,7 +5,7 @@
 // Login   <paquet_a@epitech.net>
 // 
 // Started on  Sun Jul 28 05:37:27 2013 antoine paquet
-// Last update Sun Jul 28 05:37:28 2013 antoine paquet
+// Last update Sun Jul 28 14:47:56 2013 antoine paquet
 //
 
 #include		"AObject.hh"

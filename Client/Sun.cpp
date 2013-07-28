@@ -5,7 +5,7 @@
 // Login   <paquet_a@epitech.net>
 // 
 // Started on  Sun Jul 28 05:55:42 2013 antoine paquet
-// Last update Sun Jul 28 05:55:59 2013 antoine paquet
+// Last update Sun Jul 28 14:56:23 2013 antoine paquet
 //
 
 #include "Sun.hh"
